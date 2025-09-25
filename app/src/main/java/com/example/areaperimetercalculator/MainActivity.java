@@ -62,11 +62,11 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> { ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main));
-               Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> { ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main));
+//               Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+//            return insets;
+//        });
 
         //main
         sp_j_shapes = findViewById(R.id.sp_v_shapes);
@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
         setupSpinnerChangeListener();
         textChangeListenerSquareRect();
         textChangeListenerRadius();
+        textChangeListenerTriangle();
     }
 
     public void setupSpinnerChangeListener()

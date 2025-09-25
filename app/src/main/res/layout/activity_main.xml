@@ -13,7 +13,8 @@
         android:text="Shape Area and Perimeter Calculator"
         android:textAlignment="center"
         android:textSize="32sp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -22,273 +23,288 @@
         android:text="Select the shape to computer area and perimeter"
         android:textAlignment="center"
         android:textSize="20sp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Spinner
         android:id="@+id/sp_v_shapes"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="183dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cont_v_circle"
         android:layout_width="411dp"
-        android:layout_height="481dp"
+        android:layout_height="245dp"
         android:visibility="visible"
-        tools:layout_editor_absoluteY="183dp">
+        app:layout_constraintTop_toBottomOf="@+id/sp_v_shapes"
+        tools:layout_editor_absoluteX="80dp">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="217dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="4dp"
+            android:text="Perimeter of Circle = 2 * pi * r"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="172dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginTop="28dp"
             android:text="Radius"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/et_v_radius"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/et_v_radius"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="numberDecimal"
             android:text="0"
-            app:layout_constraintBottom_toTopOf="@+id/textView6"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="72dp"
-            android:layout_marginBottom="36dp"
-            android:text="Perimeter of Circle = 2 * pi * r"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/textView7"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="96dp"
-            android:layout_marginBottom="36dp"
             android:text="Area of Circle = pi * r ^ 2"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/tv_v_computedAreaPerimeterCircle"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_v_radius" />
 
         <TextView
             android:id="@+id/tv_v_computedAreaPerimeterCircle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="144dp"
-            android:layout_marginBottom="208dp"
+            android:layout_marginStart="136dp"
             android:text="Dummy Data"
             android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cont_v_TriangleView"
+        android:layout_width="247dp"
+        android:layout_height="285dp"
+        android:layout_marginTop="308dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/sp_v_shapes"
+        tools:layout_editor_absoluteX="82dp">
+
+        <TextView
+            android:id="@+id/textview8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Base"
+            app:layout_constraintBaseline_toBaselineOf="@+id/et_v_base"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Height"
+            app:layout_constraintBaseline_toBaselineOf="@+id/et_v_height"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:text="Side A"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_v_height" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Side B"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_v_sideA" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Side C"
+            app:layout_constraintBaseline_toBaselineOf="@+id/et_v_sideC"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/et_v_base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textview8"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_v_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/et_v_base" />
+
+        <EditText
+            android:id="@+id/et_v_sideA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/et_v_height" />
+
+        <EditText
+            android:id="@+id/et_v_sideB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
+            app:layout_constraintStart_toEndOf="@+id/textView11" />
+
+        <EditText
+            android:id="@+id/et_v_sideC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/tv_v_areaperimeterTriangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginBottom="44dp"
+            android:text="Dummy data"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cont_v_TriangleView"
-            android:layout_width="158dp"
-            android:layout_height="465dp"
-            tools:layout_editor_absoluteX="148dp"
-            tools:layout_editor_absoluteY="67dp">
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/textview8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="6dp"
-                android:text="Base"
-                app:layout_constraintBaseline_toBaselineOf="@+id/et_v_base"
-                app:layout_constraintStart_toStartOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:text="Height"
-                app:layout_constraintBaseline_toBaselineOf="@+id/et_v_height"
-                app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/cont_v_squareRectangle"
+        android:layout_width="313dp"
+        android:layout_height="278dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="12dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_v_shapes">
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="4dp"
-                android:text="Side A"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_v_height" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="4dp"
+            android:text="Length"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:text="Side B"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_v_sideA" />
+        <EditText
+            android:id="@+id/et_v_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:text="Side C"
-                app:layout_constraintBaseline_toBaselineOf="@+id/et_v_sideC"
-                app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:text="Width"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_v_length" />
 
-            <EditText
-                android:id="@+id/et_v_base"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:ems="10"
-                android:inputType="text"
-                android:textSize="12sp"
-                app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/et_v_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-            <EditText
-                android:id="@+id/et_v_height"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:ems="10"
-                android:inputType="text"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/et_v_base"
-                app:layout_constraintTop_toBottomOf="@+id/et_v_base" />
+        <TextView
+            android:id="@+id/tv_v_computedValues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="8dp"
+            android:text="Area = 20 Perimeter = 10"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_v_width" />
 
-            <EditText
-                android:id="@+id/et_v_sideA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/textView10"
-                app:layout_constraintStart_toEndOf="@+id/textView10"
-                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        <TextView
+            android:id="@+id/tv_v_formulaPerimeter"
+            android:layout_width="292dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            android:text="perimeter of square = length + length + width + width"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_v_formulaArea" />
 
-            <EditText
-                android:id="@+id/et_v_sideB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"
-                android:textSize="12sp"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
-                app:layout_constraintStart_toEndOf="@+id/textView11" />
-
-            <EditText
-                android:id="@+id/et_v_sideC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"
-                android:textSize="12sp"
-                app:layout_constraintStart_toEndOf="@+id/textView11"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-            <TextView
-                android:id="@+id/tv_v_areaperimeterTriangle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="172dp"
-                android:text="Dummy data"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-
-                android:id="@+id/cont_v_squareRectangle"
-                android:layout_width="310dp"
-                android:layout_height="469dp"
-                android:layout_marginBottom="72dp"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/et_v_base">
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Length"
-                    tools:layout_editor_absoluteX="133dp"
-                    tools:layout_editor_absoluteY="16dp" />
-
-                <EditText
-                    android:id="@+id/et_v_length"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="25dp"
-                    android:ems="10"
-                    android:inputType="numberDecimal"
-                    android:text="0"
-                    app:layout_constraintBottom_toTopOf="@+id/textView5"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Width"
-                    tools:layout_editor_absoluteX="137dp"
-                    tools:layout_editor_absoluteY="120dp" />
-
-                <EditText
-                    android:id="@+id/et_v_width"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="numberDecimal"
-                    android:text="0"
-                    tools:layout_editor_absoluteX="50dp"
-                    tools:layout_editor_absoluteY="154dp" />
-
-                <TextView
-                    android:id="@+id/tv_v_computedValues"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Area = 20 Perimeter = 10"
-                    android:textSize="20sp"
-                    tools:layout_editor_absoluteX="44dp"
-                    tools:layout_editor_absoluteY="402dp" />
-
-                <TextView
-                    android:id="@+id/tv_v_formulaPerimeter"
-                    android:layout_width="292dp"
-                    android:layout_height="51dp"
-                    android:text="perimeter of square = length + length + width + width"
-                    android:textSize="20sp"
-                    android:visibility="visible"
-                    tools:layout_editor_absoluteX="9dp"
-                    tools:layout_editor_absoluteY="259dp" />
-
-                <TextView
-                    android:id="@+id/tv_v_formulaArea"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="area of square = length * width"
-                    android:textSize="20sp"
-                    tools:layout_editor_absoluteX="18dp"
-                    tools:layout_editor_absoluteY="219dp" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_v_formulaArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="12dp"
+            android:text="area of square = length * width"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_v_computedValues" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
